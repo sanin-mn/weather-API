@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  overflow-x: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.bg-img{
+  width: 100%;
   min-height: 100vh;
+  background: url(images/bgImg.jpeg)  no-repeat center center/cover;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  color: #fff;
+  
+}
+.border-box{
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.input{
+  background-color: rgba(255,255,255,0.75);
+  border-radius: 2rem;
+  border-style: none;
+}
+.group{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 1rem 0;
+}
+.temp{
+  font-size: 5rem;
+}
+.group-temp{
+  display: flex;
+  align-content: space-between;
+  justify-content: space-around;
+  flex-direction: row;
+  
+}
+.city{
+  font-size: 2rem;
+  margin-top: 2rem;
+  
+}
+.box-container{
+  margin-top: 2rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 25px;
+}
+.box{
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgb(216, 216, 216);
+  color: black;
+  width: 220px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s;
+}
+.box:hover{
+  transform: scale(1.1);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width:730px) {
+  .bg-img{
+    padding: 2rem 0;
   }
-  to {
-    transform: rotate(360deg);
+  .box-container{
+    flex-direction: column;
+  }
+  .box,.input{
+    width: 70vw;
+  }
+  .group-temp{
+    flex-direction: column;
+  }
+  .disable{
+    visibility: hidden;
   }
 }
